@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Celalettin Durğaç · developer tools</title>
-<meta name="description" content="Celalettin Durğaç, computer engineer in Ankara. Open-source developer tools: MCP servers for AI agents and CLIs in TypeScript, Python, Go and Rust, plus browser games in JavaScript.">
+<meta name="description" content="Celalettin Durğaç, computer engineer in Ankara. Open-source developer tools: MCP servers for AI agents and CLIs in TypeScript, Python, Go and Rust, plus browser games and algorithm visualizers in JavaScript.">
 <meta property="og:title" content="Celalettin Durğaç · developer tools">
-<meta property="og:description" content="Open-source MCP servers and CLIs in TypeScript, Python, Go and Rust, plus browser games in JavaScript.">
+<meta property="og:description" content="Open-source MCP servers and CLIs in TypeScript, Python, Go and Rust, plus browser games and algorithm visualizers in JavaScript.">
 <meta property="og:url" content="https://celaldrg.github.io/">
 <meta property="og:type" content="website">
 <meta name="color-scheme" content="light dark">
@@ -63,6 +63,7 @@ pre .g{color:var(--ok-term)}
 .game h3{font-size:1.05rem;margin:0;letter-spacing:-.01em}
 .game p{margin:0;color:var(--muted);font-size:.95rem;text-wrap:pretty;flex:1}
 .game .links{margin-top:6px}
+.games>.game:last-child:nth-child(odd){grid-column:1/-1}
 footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
 @media (max-width:560px){
   .wrap{padding-top:48px}
@@ -84,7 +85,7 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
     <li>Ankara, TR</li>
   </ul>
   <div class="facts" aria-label="At a glance">
-    <div><b>18</b><span>open-source projects</span></div>
+    <div><b>23</b><span>open-source projects</span></div>
     <div><b>5</b><span>languages</span></div>
     <div><b>MIT</b><span>every project</span></div>
     <div><b>CI</b><span>tested on every push</span></div>
@@ -219,6 +220,16 @@ warning .env:6          duplicate-key        SENTRY_DSN is also defined on line 
   <div class="game"><h3>Breakout</h3><p>Brick breaker with three levels and power-ups such as multi-ball.</p><ul class="links"><li><a href="https://celaldrg.github.io/breakout/">▶ play</a></li><li><a href="https://github.com/celaldrg/breakout">source</a></li></ul></div>
   <div class="game"><h3>Snake</h3><p>Four speeds, walls or wrap mode, swipe controls and a D-pad.</p><ul class="links"><li><a href="https://celaldrg.github.io/snake/">▶ play</a></li><li><a href="https://github.com/celaldrg/snake">source</a></li></ul></div>
   <div class="game"><h3>Tic-Tac-Toe</h3><p>Unbeatable minimax AI, checked against every possible game.</p><ul class="links"><li><a href="https://celaldrg.github.io/tic-tac-toe/">▶ play</a></li><li><a href="https://github.com/celaldrg/tic-tac-toe">source</a></li></ul></div>
+  <div class="game"><h3>Reversi</h3><p>Rules checked against perft counts, a three-level engine with a perfect endgame solve.</p><ul class="links"><li><a href="https://celaldrg.github.io/reversi/">▶ play</a></li><li><a href="https://github.com/celaldrg/reversi">source</a></li></ul></div>
+  <div class="game"><h3>Mangala</h3><p>The traditional Turkish mancala game with its real rules and a three-level opponent.</p><ul class="links"><li><a href="https://celaldrg.github.io/mangala/">▶ play</a></li><li><a href="https://github.com/celaldrg/mangala">source</a></li></ul></div>
+  <div class="game"><h3>Four in a Row</h3><p>Negamax with alpha-beta and a transposition table, running in a Web Worker.</p><ul class="links"><li><a href="https://celaldrg.github.io/four-in-a-row/">▶ play</a></li><li><a href="https://github.com/celaldrg/four-in-a-row">source</a></li></ul></div>
+</div>
+
+<h2 id="visualizers">Algorithm visualizers</h2>
+<p class="desc">Built the same way: vanilla JavaScript, no build step, logic covered by <code>node --test</code> unit tests.</p>
+<div class="games">
+  <div class="game"><h3>Sorting Visualizer</h3><p>Ten sorting algorithms step by step, with live counters, narration and complexity notes.</p><ul class="links"><li><a href="https://celaldrg.github.io/sorting-visualizer/">▶ open</a></li><li><a href="https://github.com/celaldrg/sorting-visualizer">source</a></li></ul></div>
+  <div class="game"><h3>Pathfinding Visualizer</h3><p>A*, Dijkstra, BFS, greedy search and DFS on a grid you draw, plus two maze generators.</p><ul class="links"><li><a href="https://celaldrg.github.io/pathfinding-visualizer/">▶ open</a></li><li><a href="https://github.com/celaldrg/pathfinding-visualizer">source</a></li></ul></div>
 </div>
 
 <h2>Contributing</h2>
