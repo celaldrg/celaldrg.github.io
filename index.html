@@ -85,7 +85,7 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
     <li>Ankara, TR</li>
   </ul>
   <div class="facts" aria-label="At a glance">
-    <div><b>29</b><span>open-source projects</span></div>
+    <div><b>31</b><span>open-source projects</span></div>
     <div><b>5</b><span>languages</span></div>
     <div><b>MIT</b><span>every project</span></div>
     <div><b>CI</b><span>tested on every push</span></div>
@@ -94,8 +94,38 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
 
 <h2>Projects</h2>
 
-<section class="project" id="aiblame">
+<section class="project" id="aichurn">
   <div class="idx">01</div>
+  <div>
+    <div class="head"><h3><a href="https://github.com/celaldrg/aichurn">aichurn</a></h3><span class="lang"><i style="background:#dea584"></i>Rust</span></div>
+    <p class="desc">Does AI-written code get rewritten faster? Replays a repository's git history line by line and measures two-week churn, copy/paste and moved code, split between AI-assisted and human commits. Exact replay, checked against the real files. Single binary, no dependencies.</p>
+<pre><span class="p">$ </span>aichurn denoland/deno
+  churn   7.1%  of new lines rewritten or deleted within 14 days
+<span class="d">                 new lines   churn</span>
+  AI-assisted       71,833     10%
+  Human            581,811    6.7%
+<span class="e">▲</span> AI-assisted lines churned 1.5× as often as human lines</pre>
+    <ul class="links"><li><a href="https://github.com/celaldrg/aichurn">source</a></li><li><a href="https://github.com/celaldrg/aichurn/releases">releases</a></li><li><a href="https://github.com/celaldrg/aichurn/issues">issues</a></li></ul>
+  </div>
+</section>
+
+<section class="project" id="agentprs">
+  <div class="idx">02</div>
+  <div>
+    <div class="head"><h3><a href="https://github.com/celaldrg/agentprs">agentprs</a></h3><span class="lang"><i style="background:#00add8"></i>Go</span></div>
+    <p class="desc">How do AI agents' pull requests fare in your repo? Shows what share of recent PRs Copilot, Claude Code, Codex, Cursor, Devin, Jules and 8 more agents opened, how often those get merged and how fast, next to human PRs. Works on any GitHub repo; GitHub Action, SVG card and badge.</p>
+<pre><span class="p">$ </span>agentprs n8n-io/n8n
+  36% of the last 1,000 PRs were opened by AI agents
+<span class="d">                 PRs   merge rate   time to merge</span>
+  Claude Code    364          89%           23.9h
+  Humans         452          88%           23.2h
+<span class="g">=</span> Agent PRs get merged about as often as human PRs</pre>
+    <ul class="links"><li><a href="https://github.com/celaldrg/agentprs">source</a></li><li><a href="https://github.com/celaldrg/agentprs/releases">releases</a></li><li><a href="https://github.com/celaldrg/agentprs/issues">issues</a></li></ul>
+  </div>
+</section>
+
+<section class="project" id="aiblame">
+  <div class="idx">03</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/aiblame">aiblame</a></h3><span class="lang"><i style="background:#3178c6"></i>TypeScript</span></div>
     <p class="desc">How much of this repo did AI write? <code>git blame</code> for the agent era: the share of the code at HEAD written in commits signed by Claude Code, Cursor, Copilot, Codex, Aider, Devin and 9 more agents. Works on any public GitHub repo, writes an SVG card and badge, and can gate CI. Zero dependencies.</p>
@@ -109,7 +139,7 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
 </section>
 
 <section class="project" id="shush">
-  <div class="idx">02</div>
+  <div class="idx">04</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/shush">shush</a></h3><span class="lang"><i style="background:#3178c6"></i>TypeScript</span></div>
     <p class="desc">Cuts the noise from command output before it reaches an AI agent. Passing tests, progress bars and install logs go; every error and summary stays, and the full output is one call away. MCP server and CLI. On its benchmark: 20,299 → 6,215 tokens (−69%).</p>
@@ -123,7 +153,7 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
 </section>
 
 <section class="project" id="turkiye-mcp">
-  <div class="idx">03</div>
+  <div class="idx">05</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/turkiye-mcp">turkiye-mcp</a></h3><span class="lang"><i style="background:#3178c6"></i>TypeScript</span></div>
     <p class="desc">An MCP server with 17 Türkiye-specific tools for Claude, Cursor, VS Code and other clients: official TCMB exchange rates, live earthquakes, the holiday calendar and business-day math, IBAN/TCKN/VKN validation, provinces, prayer times and weather. No API keys.</p>
@@ -138,7 +168,7 @@ footer{margin-top:64px;font:13px/1.6 var(--mono);color:var(--muted)}
 </section>
 
 <section class="project" id="lockdiff">
-  <div class="idx">04</div>
+  <div class="idx">06</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/lockdiff">lockdiff</a></h3><span class="lang"><i style="background:#3178c6"></i>TypeScript</span></div>
     <p class="desc">Readable diffs for lockfiles. Turns a 3,000-line <code>package-lock.json</code> change into what a reviewer needs: upgraded, downgraded, added and removed packages, major bumps first. Ten formats (npm, pnpm, yarn, Cargo, Go, Poetry, uv, Pipenv, Composer, Bundler), Markdown for PR comments, zero dependencies.</p>
@@ -153,7 +183,7 @@ Cargo.lock (cargo)  41 upgraded · 11 added · 9 removed · 2 major
 </section>
 
 <section class="project" id="csvglance">
-  <div class="idx">05</div>
+  <div class="idx">07</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/csvglance">csvglance</a></h3><span class="lang"><i style="background:#00add8"></i>Go</span></div>
     <p class="desc">Know a CSV before you load it: type, missing values, distinct count, range, mean and top values for every column in one streaming pass. Detects delimiters, gzip and decimal commas, flags columns that will break an import. Parallel; about a second per million rows.</p>
@@ -168,7 +198,7 @@ airport-codes.csv · 86,286 rows · 13 columns · comma-separated · 8.4 MB · 8
 </section>
 
 <section class="project" id="todoage">
-  <div class="idx">06</div>
+  <div class="idx">08</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/todoage">todoage</a></h3><span class="lang"><i style="background:#dea584"></i>Rust</span></div>
     <p class="desc">How old are your TODOs? Finds TODO, FIXME and HACK comments and uses <code>git blame</code> to show who wrote each one and how long ago, oldest first. JSON output and a CI gate for stale ones. Real output on ripgrep:</p>
@@ -183,7 +213,7 @@ airport-codes.csv · 86,286 rows · 13 columns · comma-separated · 8.4 MB · 8
 </section>
 
 <section class="project" id="certpeek">
-  <div class="idx">07</div>
+  <div class="idx">09</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/certpeek">certpeek</a></h3><span class="lang"><i style="background:#00add8"></i>Go</span></div>
     <p class="desc">Checks TLS certificates for one host or hundreds at once: expiry, hostname, trust chain and TLS version. Table or JSON output and exit codes for cron and CI. One binary, standard library only.</p>
@@ -198,7 +228,7 @@ airport-codes.csv · 86,286 rows · 13 columns · comma-separated · 8.4 MB · 8
 </section>
 
 <section class="project" id="envguard">
-  <div class="idx">08</div>
+  <div class="idx">10</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/envguard">envguard</a></h3><span class="lang"><i style="background:#3572a5"></i>Python</span></div>
     <p class="desc">A linter for <code>.env</code> files: syntax errors, duplicates, keys missing from <code>.env.example</code>, and real credentials committed to example files by mistake. Zero dependencies, with a pre-commit hook and GitHub Actions annotations.</p>
@@ -213,7 +243,7 @@ warning .env:6          duplicate-key        SENTRY_DSN is also defined on line 
 </section>
 
 <section class="project" id="awesome-turkiye-dev">
-  <div class="idx">09</div>
+  <div class="idx">11</div>
   <div>
     <div class="head"><h3><a href="https://github.com/celaldrg/awesome-turkiye-dev">awesome-turkiye-dev</a></h3><span class="lang"><i style="background:#888"></i>Curated list</span></div>
     <p class="desc">Resources for developers in Türkiye: open-source projects, Turkish NLP, APIs and open data, communities, learning, podcasts, events and jobs. Links are checked automatically.</p>
