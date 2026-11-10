@@ -97,7 +97,7 @@ code{font:.88em var(--mono);background:var(--card2);border:1px solid var(--line)
 .stats div{background:var(--bg2);padding:20px}
 .stats b{display:block;font-size:clamp(1.6rem,3.4vw,2.1rem);line-height:1.1;letter-spacing:-.03em;font-weight:700}
 .stats span{font-size:13px;color:var(--muted)}
-@media (min-width:760px){.stats{grid-template-columns:repeat(4,1fr)}}
+@media (min-width:760px){.stats{grid-template-columns:repeat(3,1fr)}}
 
 /* stack */
 .stack{display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0;list-style:none}
@@ -199,7 +199,6 @@ footer a{color:var(--fg2)}
       <ul>
         <li><a href="#work">Work</a></li>
         <li><a href="#tools">Tools</a></li>
-        <li><a href="#games">Games &amp; apps</a></li>
         <li><a href="#about">About</a></li>
       </ul>
     </nav>
@@ -244,9 +243,8 @@ todoage/   certpeek/     envguard/
   </div>
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
-      <div><b>75</b><span>public repositories</span></div>
+      <div><b>30</b><span>public repositories</span></div>
       <div><b>14</b><span>developer tools</span></div>
-      <div><b>33+22</b><span>browser games &amp; web apps</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -360,77 +358,6 @@ warning .env:6          duplicate-key        SENTRY_DSN is also defined on line 
   </div>
 </section>
 
-<section class="block" id="games" aria-labelledby="games-h">
-  <div class="wrap">
-    <p class="eyebrow">Playable in the browser</p>
-    <h2 id="games-h">Games, visualizers and web apps</h2>
-    <p class="intro">Small games and tools that run in any browser, phone included. Vanilla JavaScript, no build step, logic covered by <code>node --test</code> unit tests.</p>
-    <h3 class="sub">Browser games · 33</h3>
-    <ul class="minis" id="games-list">
-<li class="mini"><h3><a href="https://celaldrg.github.io/chess-web/">Chess</a></h3><p>Full rules and an alpha-beta engine with three levels. PGN export.</p><div class="mini-links"><a href="https://celaldrg.github.io/chess-web/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/chess-web">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/sapan/">Sapan</a></h3><p>Physics slingshot game on Matter.js, five levels of crumbling castles.</p><div class="mini-links"><a href="https://celaldrg.github.io/sapan/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/sapan">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/sudoku/">Sudoku</a></h3><p>Puzzles with a guaranteed unique solution, notes, hints, three difficulties.</p><div class="mini-links"><a href="https://celaldrg.github.io/sudoku/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/sudoku">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/2048/">2048</a></h3><p>Sliding tiles with animations, multi-step undo and saved games.</p><div class="mini-links"><a href="https://celaldrg.github.io/2048/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/2048">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/calculator/">Scientific Calculator</a></h3><p>Own expression parser, no eval: functions, DEG/RAD, history.</p><div class="mini-links"><a href="https://celaldrg.github.io/calculator/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/calculator">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/minesweeper/">Minesweeper</a></h3><p>Safe first click, flags, chording, long-press to flag on mobile.</p><div class="mini-links"><a href="https://celaldrg.github.io/minesweeper/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/minesweeper">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/kanat/">Kanat</a></h3><p>One-tap flying game with original art and a saved high score.</p><div class="mini-links"><a href="https://celaldrg.github.io/kanat/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/kanat">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/breakout/">Breakout</a></h3><p>Brick breaker with three levels and power-ups such as multi-ball.</p><div class="mini-links"><a href="https://celaldrg.github.io/breakout/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/breakout">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/snake/">Snake</a></h3><p>Four speeds, walls or wrap mode, swipe controls and a D-pad.</p><div class="mini-links"><a href="https://celaldrg.github.io/snake/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/snake">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/tic-tac-toe/">Tic-Tac-Toe</a></h3><p>Unbeatable minimax AI, checked against every possible game.</p><div class="mini-links"><a href="https://celaldrg.github.io/tic-tac-toe/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/tic-tac-toe">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/reversi/">Reversi</a></h3><p>Rules checked against perft counts, a three-level engine with a perfect endgame solve.</p><div class="mini-links"><a href="https://celaldrg.github.io/reversi/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/reversi">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/mangala/">Mangala</a></h3><p>The traditional Turkish mancala game with its real rules and a three-level opponent.</p><div class="mini-links"><a href="https://celaldrg.github.io/mangala/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/mangala">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/four-in-a-row/">Four in a Row</a></h3><p>Negamax with alpha-beta and a transposition table, running in a Web Worker.</p><div class="mini-links"><a href="https://celaldrg.github.io/four-in-a-row/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/four-in-a-row">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/memory/">Memory</a></h3><p>Card-matching game: three board sizes, solo or two players on one device, 18 original SVG symbols and 3D flips.</p><div class="mini-links"><a href="https://celaldrg.github.io/memory/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/memory">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/maze/">Maze</a></h3><p>Perfect mazes from three generators (backtracker, Prim, Kruskal with union-find), five levels and a BFS solution path.</p><div class="mini-links"><a href="https://celaldrg.github.io/maze/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/maze">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/15-puzzle/">15 Puzzle</a></h3><p>Sliding puzzle from 3×3 to 5×5: every shuffle is solvable, IDA* hints on 3×3 and a picture mode.</p><div class="mini-links"><a href="https://celaldrg.github.io/15-puzzle/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/15-puzzle">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/tavla/">Tavla</a></h3><p>Turkish backgammon against the computer (two levels) or a friend: bar entry, hitting, doubles, bearing off and mars.</p><div class="mini-links"><a href="https://celaldrg.github.io/tavla/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/tavla">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/dama/">Dama</a></h3><p>Turkish draughts with flying kings and forced maximum captures, and an alpha-beta opponent in a Web Worker.</p><div class="mini-links"><a href="https://celaldrg.github.io/dama/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/dama">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/adam-asmaca/">Adam Asmaca</a></h3><p>Hangman with English and Turkish word lists that knows ı from i, an animated SVG drawing, hints and streaks.</p><div class="mini-links"><a href="https://celaldrg.github.io/adam-asmaca/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/adam-asmaca">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/dokuz-tas/">Dokuz Taş</a></h3><p>Nine men's morris with placing, moving and flying phases, a three-level computer opponent and drag, tap or keys.</p><div class="mini-links"><a href="https://celaldrg.github.io/dokuz-tas/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/dokuz-tas">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/gomoku/">Gomoku</a></h3><p>Five in a row on a wooden 15×15 board: freestyle or exactly-five rule, alpha-beta AI with three levels in a Web Worker.</p><div class="mini-links"><a href="https://celaldrg.github.io/gomoku/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/gomoku">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/pisti/">Pişti</a></h3><p>The classic Turkish card game against the computer: piştis, full scoring with a round summary, matches to 51, 101 or 151.</p><div class="mini-links"><a href="https://celaldrg.github.io/pisti/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/pisti">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/space-shooter/">Space Shooter</a></h3><p>Vertical arcade shooter: ten scripted waves, a three-phase boss, a blaster plus three weapons that level up.</p><div class="mini-links"><a href="https://celaldrg.github.io/space-shooter/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/space-shooter">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/word-search/">Word Search</a></h3><p>20 categories in English and Turkish, three sizes up to 15×15 in all 8 directions, every word hidden exactly once; drag, tap or keys.</p><div class="mini-links"><a href="https://celaldrg.github.io/word-search/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/word-search">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/nonogram/">Nonogram</a></h3><p>Paint-by-numbers logic puzzles: 20 hand-made pictures up to 15×15 and endless random ones, each with exactly one solution and no guessing.</p><div class="mini-links"><a href="https://celaldrg.github.io/nonogram/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/nonogram">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/bulls-and-cows/">Bulls and Cows</a></h3><p>Crack the secret number, or let a minimax solver crack yours (any 4-digit one in at most 7 guesses); 3 to 5 digits, notes and answer checking.</p><div class="mini-links"><a href="https://celaldrg.github.io/bulls-and-cows/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/bulls-and-cows">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/amiral-batti/">Amiral Battı</a></h3><p>Sea battle against the computer: drag five ships onto your sea, three AI levels, optional salvo and touching-ship rules, saved battles.</p><div class="mini-links"><a href="https://celaldrg.github.io/amiral-batti/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/amiral-batti">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/solitaire/">Solitaire</a></h3><p>Klondike with Draw 1 or 3, numbered deals, a solver that can deal only winnable games, unlimited undo, hints and auto-complete.</p><div class="mini-links"><a href="https://celaldrg.github.io/solitaire/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/solitaire">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/dots-and-boxes/">Dots and Boxes</a></h3><p>3×3 to 7×7 boards against a friend or a computer whose Hard level counts chains, plays the long-chain rule and double-deals.</p><div class="mini-links"><a href="https://celaldrg.github.io/dots-and-boxes/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/dots-and-boxes">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/batak/">Batak</a></h3><p>The Turkish trick-taking game with bidding, against three computer players that bid, pick trumps and remember the cards played.</p><div class="mini-links"><a href="https://celaldrg.github.io/batak/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/batak">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/okey/">Okey</a></h3><p>The Turkish tile game against three computer players that read the discards, with a draggable two-row rack, seven pairs and false jokers.</p><div class="mini-links"><a href="https://celaldrg.github.io/okey/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/okey">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/air-hockey/">Air Hockey</a></h3><p>Neon air hockey with swept collisions, a computer opponent on three levels that predicts wall bounces, and two players on one screen.</p><div class="mini-links"><a href="https://celaldrg.github.io/air-hockey/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/air-hockey">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/go-game/">Go</a></h3><p>Go on 9x9, 13x13 and 19x19 with superko, handicap, area scoring and a Monte Carlo tree search computer player in a Web Worker.</p><div class="mini-links"><a href="https://celaldrg.github.io/go-game/">Play <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/go-game">Source</a></div></li>
-    </ul>
-    <button class="btn sm toggle" type="button" data-target="games-list" aria-expanded="false">Show all 33 games</button>
-    <h3 class="sub" id="visualizers">Visualizers, simulations and tools · 22</h3>
-    <ul class="minis" id="apps-list">
-<li class="mini"><h3><a href="https://celaldrg.github.io/sorting-visualizer/">Sorting Visualizer</a></h3><p>Ten sorting algorithms step by step, with live counters, narration and complexity notes.</p><div class="mini-links"><a href="https://celaldrg.github.io/sorting-visualizer/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/sorting-visualizer">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/pathfinding-visualizer/">Pathfinding Visualizer</a></h3><p>A*, Dijkstra, BFS, greedy search and DFS on a grid you draw, plus two maze generators.</p><div class="mini-links"><a href="https://celaldrg.github.io/pathfinding-visualizer/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/pathfinding-visualizer">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/game-of-life/">Game of Life</a></h3><p>Conway's Life on a canvas you draw on: zoom and pan, B/S rule presets such as HighLife and Day &amp; Night, eight classic patterns.</p><div class="mini-links"><a href="https://celaldrg.github.io/game-of-life/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/game-of-life">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/typing-test/">Typing Test</a></h3><p>Typing speed test with English and Turkish word lists: WPM, accuracy, consistency and a per-second chart.</p><div class="mini-links"><a href="https://celaldrg.github.io/typing-test/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/typing-test">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/pixel-art/">Pixel Art Editor</a></h3><p>Pixel sprites with mouse, pen or touch: fill, line, rectangle, mirror drawing, undo and PNG export up to 16×.</p><div class="mini-links"><a href="https://celaldrg.github.io/pixel-art/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/pixel-art">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/focus-timer/">Focus Timer</a></h3><p>Focus sessions with short and long breaks, drift-free timing, a task list with estimates and a 7-day chart.</p><div class="mini-links"><a href="https://celaldrg.github.io/focus-timer/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/focus-timer">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/drum-machine/">Drum Machine</a></h3><p>An 8-track, 16-step drum machine with synthesized drums, swing, patterns A–D, a song chain and share links.</p><div class="mini-links"><a href="https://celaldrg.github.io/drum-machine/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/drum-machine">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/piano/">Web Piano</a></h3><p>A piano for touch and keyboard: four synth sounds, sustain, a recorder that keeps 8 takes and a Learn mode.</p><div class="mini-links"><a href="https://celaldrg.github.io/piano/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/piano">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/kanban/">Kanban Board</a></h3><p>A private Kanban board: drag and drop for mouse, touch and keyboard, WIP limits, filters and undo/redo.</p><div class="mini-links"><a href="https://celaldrg.github.io/kanban/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/kanban">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/color-palette/">Color Palette Generator</a></h3><p>Harmonious palettes in OKLCH with locks, WCAG contrast checks, 50–950 shade scales and CSS, JSON or Tailwind export.</p><div class="mini-links"><a href="https://celaldrg.github.io/color-palette/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/color-palette">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/markdown-editor/">Markdown Editor</a></h3><p>Live-preview Markdown with its own parser: synced scrolling, code highlighting, a table of contents and .md/.html export.</p><div class="mini-links"><a href="https://celaldrg.github.io/markdown-editor/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/markdown-editor">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/qr-generator/">QR Code Generator</a></h3><p>QR codes encoded from scratch with Reed–Solomon error correction: links, Wi-Fi, e-mail, SMS and vCards, PNG or SVG.</p><div class="mini-links"><a href="https://celaldrg.github.io/qr-generator/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/qr-generator">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/unit-converter/">Unit Converter</a></h3><p>136 units in 14 categories with exact definitions; type “5 ft 3 in to cm”, see every unit at once, keep favorites.</p><div class="mini-links"><a href="https://celaldrg.github.io/unit-converter/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/unit-converter">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/password-generator/">Password Generator</a></h3><p>Unbiased passwords and English or Turkish passphrases, an honest strength meter with crack times, and a checker for your own password.</p><div class="mini-links"><a href="https://celaldrg.github.io/password-generator/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/password-generator">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/json-formatter/">JSON Formatter</a></h3><p>Exact line and column errors, 20-digit numbers kept as written, a relaxed mode that repairs, a fast tree with JSONPath queries, and a diff.</p><div class="mini-links"><a href="https://celaldrg.github.io/json-formatter/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/json-formatter">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/loan-calculator/">Loan Calculator</a></h3><p>Equal installments or equal principal with tax, fees, grace months and extra payments; schedule, chart, two offers and an affordability solver.</p><div class="mini-links"><a href="https://celaldrg.github.io/loan-calculator/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/loan-calculator">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/regex-tester/">Regex Tester</a></h3><p>Live highlighting with colored named groups, a plain-language explanation of every token, replace and split previews, shareable links.</p><div class="mini-links"><a href="https://celaldrg.github.io/regex-tester/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/regex-tester">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/function-plotter/">Function Plotter</a></h3><p>Its own parser, up to six functions with sliders, symbolic derivatives, roots, extrema, intersections and shaded integrals.</p><div class="mini-links"><a href="https://celaldrg.github.io/function-plotter/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/function-plotter">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/fractal-explorer/">Fractal Explorer</a></h3><p>Mandelbrot, Julia, Burning Ship, Tricorn and Multibrot, rendered progressively on Web Workers, with a live Julia picker.</p><div class="mini-links"><a href="https://celaldrg.github.io/fractal-explorer/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/fractal-explorer">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/text-diff/">Text Diff</a></h3><p>Line, word and character diffs with a linear-space Myers algorithm, a side-by-side view, unified patches and a patch applier.</p><div class="mini-links"><a href="https://celaldrg.github.io/text-diff/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/text-diff">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/mini-sheet/">Mini Sheet</a></h3><p>A small spreadsheet with its own formula parser (no eval), 25 functions, a dependency graph, undo/redo and CSV import and export.</p><div class="mini-links"><a href="https://celaldrg.github.io/mini-sheet/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/mini-sheet">Source</a></div></li>
-<li class="mini"><h3><a href="https://celaldrg.github.io/fourier-drawing/">Fourier Drawing</a></h3><p>Draw any closed shape and watch a chain of rotating circles trace it, computed with an FFT; choose the number of terms and export SVG.</p><div class="mini-links"><a href="https://celaldrg.github.io/fourier-drawing/">Open <span aria-hidden="true">→</span></a><a href="https://github.com/celaldrg/fourier-drawing">Source</a></div></li>
-    </ul>
-    <button class="btn sm toggle" type="button" data-target="apps-list" aria-expanded="false">Show all 22 apps</button>
-  </div>
-</section>
-
 <section class="block" id="about" aria-labelledby="about-h">
   <div class="wrap about">
     <div>
@@ -477,18 +404,5 @@ warning .env:6          duplicate-key        SENTRY_DSN is also defined on line 
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('.minis').forEach(function(list){
-  list.querySelectorAll('.mini').forEach(function(li,i){ if(i>=6) li.classList.add('more'); });
-});
-document.querySelectorAll('.toggle').forEach(function(b){
-  var label=b.textContent;
-  b.addEventListener('click',function(){
-    var l=document.getElementById(b.dataset.target), open=l.classList.toggle('show-all');
-    b.setAttribute('aria-expanded',open); b.textContent=open?'Show fewer':label;
-    if(!open) l.scrollIntoView({block:'start'});
-  });
-});
-</script>
 </body>
 </html>
