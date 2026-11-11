@@ -243,7 +243,7 @@ todoage/   certpeek/     envguard/
   </div>
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
-      <div><b>30</b><span>public repositories</span></div>
+      <div><b>31</b><span>public repositories</span></div>
       <div><b>14</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
@@ -311,6 +311,13 @@ todoage/   certpeek/     envguard/
       SKILL.md:2  <span class="e">error</span>    name-format        name 'Release_Notes' must be lowercase
       SKILL.md:7  <span class="e">error</span>    broken-link        'templates/notes.md' does not exist
 <span class="d">3 skill(s), 3 error(s), 2 warning(s)</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/skillcheck">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/skillcheck/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/skillcheck/issues">Issues</a></div></article>
+<article class="card" id="subagentlint"><div class="card-top"><span class="tag">Agent tooling</span><span class="chip"><i style="background:#3572a5"></i>Python</span></div><h3><a href="https://github.com/celaldrg/subagentlint">subagentlint</a></h3><p>Linter for Claude Code subagents, the <code>.claude/agents</code> Markdown files that otherwise fail silently: frontmatter typos, missing descriptions, duplicate names, broken hook scripts and the 15,000-token description budget. Zero dependencies; JSON and GitHub annotation output.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>subagentlint examples/broken
+<span class="e">FAIL</span>  typo-reviewer  <span class="d">(~23 tokens)</span>
+      typo-reviewer.md:4  <span class="w">warning</span>  unknown-field      permission_mode → permissionMode
+      typo-reviewer.md:5  <span class="w">warning</span>  tool-unknown       'Grap' did you mean 'Grep'?
+<span class="e">FAIL</span>  no-desc  <span class="d">(~15 tokens)</span>
+      no-desc.md:2  <span class="e">error</span>    description-missing  name is set but description is missing
+<span class="d">8 agent(s), 6 error(s), 5 warning(s)</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/subagentlint">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/subagentlint/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/subagentlint/issues">Issues</a></div></article>
 <article class="card" id="llmslint"><div class="card-top"><span class="tag">Agent tooling</span><span class="chip"><i style="background:#00add8"></i>Go</span></div><h3><a href="https://github.com/celaldrg/llmslint">llmslint</a></h3><p>Linter for <code>llms.txt</code>, the file that points AI agents at your docs: structure, link format, relative and dead URLs, size of the <code>Optional</code> section. Works on a file, URL or whole domain; JSON and CI modes.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>llmslint testdata/bad.txt          <span class="d"># lines trimmed</span>
 bad.txt:2: <span class="e">error</span> [h1-first] the H1 title must be the first thing in the file
 bad.txt:2: warning [summary] no blockquote summary ("> ...") after the title
