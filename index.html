@@ -244,7 +244,7 @@ todoage/   certpeek/     envguard/
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
       <div><b>31</b><span>public repositories</span></div>
-      <div><b>14</b><span>developer tools</span></div>
+      <div><b>28</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -326,6 +326,14 @@ examples/broken/.claude/settings.json
   20:43  <span class="e">error</span>    header "Authorization" uses $AUDIT_TOKEN, which is not in allowedEnvVars
   48:28  <span class="e">error</span>    "UserPromptSubmitted" is not a hook event (did you mean "UserPromptSubmit"?)
 <span class="d">8 errors, 8 warnings, 1 note in 1 file</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/hooklint">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/hooklint/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/hooklint/issues">Issues</a></div></article>
+<article class="card" id="permlint"><div class="card-top"><span class="tag">Agent tooling</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/permlint">permlint</a></h3><p>Lints Claude Code permission rules, the <code>allow</code>, <code>ask</code> and <code>deny</code> lists in <code>.claude/settings.json</code> and <code>settings.local.json</code>, before they let too much through: <code>Read(/etc/…)</code> deny rules that anchor at the project, <code>:*</code> in the middle of a pattern, <code>Grep</code> and <code>Write</code> path rules that never match, allow rules shadowed by a deny or ask rule in another file, and wildcards like <code>Bash(git * main)</code> that auto-approve a force push. <code>permlint explain</code> shows which rule decides a command. Zero dependencies, JSON and GitHub annotations.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>permlint examples/broken   <span class="d"># lines trimmed</span>
+examples/broken/.claude/settings.json  <span class="d">project · allow 5 · ask 1 · deny 7</span>
+    9 <span class="e">error</span> allow WebFetch(https://docs.github.com/en): WebFetch rules match on domain:&lt;host&gt;, so this never matches <span class="d">[webfetch-domain]</span>
+   16 <span class="e">error</span> deny  Read(/etc/passwd): a single / anchors at &lt;project&gt;, so this protects &lt;project&gt;/etc/passwd <span class="d">[single-slash-path]</span>
+   18 <span class="e">error</span> deny  Grep(secrets/**): paths are checked only against Read and Edit rules, so this blocks nothing <span class="d">[unmatched-path-tool]</span>
+   20 <span class="e">error</span> deny  Bash(git:* --force): ":*" only works at the end; here the colon is literal, so this never matches <span class="d">[colon-star]</span>
+    7 <span class="a">warn</span>  allow Bash(git * main): a * before the subcommand matches every git subcommand and option <span class="d">[wildcard-subcommand]</span>
+<span class="d">2 files, 15 rules: 7 errors, 8 warnings, 1 info</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/permlint">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/permlint/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/permlint/issues">Issues</a></div></article>
 <article class="card" id="a2alint"><div class="card-top"><span class="tag">Agent tooling</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/a2alint">a2alint</a></h3><p>Lints A2A (Agent2Agent) Agent Cards, the <code>/.well-known/agent-card.json</code> files other agents read to decide how to call yours: 1.0 vs 0.3 layout, missing fields, bindings and media types that clients will not match, security requirements that name undefined schemes, malformed signatures, leaked secrets and hidden text aimed at client LLMs. Works on a file or a live URL; zero dependencies, JSON output and a CI gate.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>a2alint examples/broken   <span class="d"># lines trimmed</span>
 examples/broken/.well-known/agent-card.json <span class="d">(A2A 1.0 card)</span>
    6:66  <span class="e">error</span>    protocolBinding "JSON-RPC" is not a core binding; clients look for exactly "JSONRPC"
