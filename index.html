@@ -244,7 +244,7 @@ todoage/   certpeek/     envguard/
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
       <div><b>31</b><span>public repositories</span></div>
-      <div><b>28</b><span>developer tools</span></div>
+      <div><b>29</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -389,6 +389,24 @@ examples/weather-py.mcpb  <span class="d">archive · manifest 0.1 · python serv
   <span class="e">✗ stdout</span> <span class="e">non-JSON line from the server: "notes-server: loaded 0 notes"</span>
 
   8 requests · <span class="g">5 match</span> · <span class="e">3 changed</span> · <span class="d">0 missing</span> · <span class="e">1 stdout noise</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/mcpsnap">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/mcpsnap/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/mcpsnap/issues">Issues</a></div></article>
+<article class="card" id="mcpshake"><div class="card-top"><span class="tag">MCP tooling · CI</span><span class="chip"><i style="background:#3572a5"></i>Python</span></div><h3><a href="https://github.com/celaldrg/mcpshake">mcpshake</a></h3><p>Property-based tests for MCP servers. Starts a stdio server, reads <code>tools/list</code> and calls every tool with arguments generated from its <code>inputSchema</code>: schema-valid ones (minimal, full, random and edge values like the empty string, the boundary integer, emoji and 1000-character pastes) and targeted invalid ones (missing required fields, wrong types, out-of-range numbers). Reports crashes, hangs, stray <code>print()</code> output on stdout, <code>-32603</code> errors, leaked stack traces, malformed results and <code>structuredContent</code> that breaks the <code>outputSchema</code>, each with the exact arguments that triggered it. Restarts the server after a crash and keeps going, replays with <code>--seed</code>, skips <code>destructiveHint</code> tools. Zero dependencies.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>mcpshake --timeout 1 -- python3 examples/notes_server.py   <span class="d"># lines trimmed</span>
+<span class="d">server notes-demo 0.3.0 · protocol 2025-11-25 · 5 tools (4 tested) · seed 1 · 30 valid cases/tool</span>
+  <span class="e">✗</span> search_notes <span class="d">38 calls · p95 1ms</span>
+      <span class="e">✗ internal-error</span>    JSON-RPC error -32603 <span class="d">(2×)</span>
+          <span class="d">args</span> {"query": ""}
+          <span class="d">got </span> IndexError: string index out of range
+  <span class="e">✗</span> get_note     <span class="d">35 calls · p95 1ms</span>
+      <span class="e">✗ crash</span>             server exited with code 3
+          <span class="d">args</span> {"id": 2147483647}
+  <span class="e">✗</span> word_stats   <span class="d">21 calls · p95 1ms</span>
+      <span class="e">✗ stdout-noise</span>      non-JSON line on stdout
+      <span class="e">✗ output-schema</span>     $.chars: expected integer, got string <span class="d">(3×)</span>
+  <span class="e">✗</span> summarize    <span class="d">30 calls · p95 1ms</span>  <span class="a">stopped after 2 timeouts</span>
+      <span class="e">✗ timeout</span>           no response within 1s <span class="d">(2×)</span>
+          <span class="d">args</span> {"text": "notes", "every": 0}
+  <span class="d">- delete_note  skipped: destructiveHint: true (use --include-destructive)</span>
+
+5 tools · 124 calls · <span class="e">5 errors</span> · <span class="a">8 warnings</span> · 1 info · 3 restarts · 3.4s</pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/mcpshake">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/mcpshake/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/mcpshake/issues">Issues</a></div></article>
 <article class="card" id="mcpaudit"><div class="card-top"><span class="tag">Agent security</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/mcpaudit">mcpaudit</a></h3><p>Audits MCP config files (<code>.mcp.json</code>, Cursor, VS Code, Gemini, Claude Desktop) before an agent runs them: hardcoded secrets, unpinned <code>npx</code>/<code>uvx</code>/<code>docker</code> servers, plain-HTTP remotes, home paths and conflicting duplicates. Zero dependencies; JSON output and a CI gate.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>mcpaudit examples
 .mcp.json  <span class="d">4 servers</span>
   <span class="e">error</span> github: env GITHUB_PERSONAL_ACCESS_TOKEN holds a literal secret (exam…(29 chars))
