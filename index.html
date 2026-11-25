@@ -243,8 +243,8 @@ todoage/   certpeek/     envguard/
   </div>
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
-      <div><b>42</b><span>public repositories</span></div>
-      <div><b>30</b><span>developer tools</span></div>
+      <div><b>44</b><span>public repositories</span></div>
+      <div><b>31</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -310,6 +310,18 @@ Command:  rm -rf build
   restore   ~/project/build/app.bin
   restore   ~/project/build/assets.map
 <span class="g">Restored 3 paths.</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/undoguard">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/undoguard/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/undoguard/issues">Issues</a></div></article>
+<article class="card" id="flakehound"><div class="card-top"><span class="tag">Testing</span><span class="chip"><i style="background:#00add8"></i>Go</span></div><h3><a href="https://github.com/celaldrg/flakehound">flakehound</a></h3><p>Finds flaky tests and proves it with numbers. Repeats your test command or ingests CI reports (JUnit XML, <code>go test -json</code>, TAP, Jest JSON), then ranks tests that pass and fail on the same commit with a failure rate, a 95% confidence interval, a likely cause and the chance a clean commit goes red. <code>flakehound quarantine</code> and <code>flakehound gate</code> keep flakes from blocking CI while real failures still do.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>flakehound run -n 20 -q -- go test -json -count=1 ./...
+flakehound  20 runs · 1 commit · 23 tests · 2026-11-25 → 2026-11-25
+Verdicts  3 flaky · 1 broken · 0 regressed · 19 stable
+         a clean commit has a 46% chance of a red build from flakes alone (1.9 CI runs to get green)
+<span class="d">Flaky: same code, different results (3)</span>
+<span class="d">  RATE  FAILS   95% CI    SAME-COMMIT TEST                                           LIKELY CAUSE</span>
+  25%   5/20    11%–47%   1 commit    demo/billing::TestChargeCard                   network
+  20%   4/20    8%–42%    1 commit    demo/cache::TestEviction                       nondeterministic
+  10%   2/20    3%–30%    1 commit    demo/cache::TestTTL/refresh                    nondeterministic
+<span class="d">Broken: fails every time (1)</span>
+<span class="d">  RATE  FAILS   95% CI    SAME-COMMIT TEST                                           LIKELY CAUSE</span>
+<span class="e">  100%  20/20   84%–100%  -           demo/billing::TestLegacyExport                 </span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/flakehound">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/flakehound/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/flakehound/issues">Issues</a></div></article>
 <article class="card" id="turkiye-mcp"><div class="card-top"><span class="tag">MCP server</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/turkiye-mcp">turkiye-mcp</a></h3><p>An MCP server with 17 Türkiye-specific tools for Claude, Cursor, VS Code and other clients: official TCMB exchange rates, live earthquakes, the holiday calendar and business-day math, IBAN/TCKN/VKN validation, provinces, prayer times and weather. No API keys.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="d">// ~/.cursor/mcp.json</span>
 {
   "mcpServers": {
