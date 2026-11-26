@@ -243,8 +243,8 @@ todoage/   certpeek/     envguard/
   </div>
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
-      <div><b>44</b><span>public repositories</span></div>
-      <div><b>31</b><span>developer tools</span></div>
+      <div><b>45</b><span>public repositories</span></div>
+      <div><b>32</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -322,6 +322,16 @@ Verdicts  3 flaky · 1 broken · 0 regressed · 19 stable
 <span class="d">Broken: fails every time (1)</span>
 <span class="d">  RATE  FAILS   95% CI    SAME-COMMIT TEST                                           LIKELY CAUSE</span>
 <span class="e">  100%  20/20   84%–100%  -           demo/billing::TestLegacyExport                 </span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/flakehound">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/flakehound/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/flakehound/issues">Issues</a></div></article>
+<article class="card" id="dumpveil"><div class="card-top"><span class="tag">Data privacy</span><span class="chip"><i style="background:#dea584"></i>Rust</span></div><h3><a href="https://github.com/celaldrg/dumpveil">dumpveil</a></h3><p>Scrubs personal data out of PostgreSQL, MySQL and SQLite dumps so production data can go to a laptop or staging. <code>dumpveil scan</code> finds emails, phones, cards (Luhn), IBANs (mod-97), keys and PII inside free text; <code>dumpveil run</code> swaps them for consistent keyed fakes so joins still work and leaves every other byte untouched; <code>dumpveil verify</code> fails CI if anything real is left. Streaming, zero dependencies.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>dumpveil run examples/shop.pg.sql --auto -o safe.sql
+dumpveil run  examples/shop.pg.sql → safe.sql · postgres
+  2,674 rows read · 2,642 rows rewritten · 7,145 values replaced · 210.1 KB in 0.01s (15 MB/s)
+<span class="d">  public.customers.email           email        400</span>
+<span class="d">  public.payments.card_number      card         429</span>
+<span class="d">  public.support_tickets.body      scrub        106</span>
+<span class="d">  … 16 more columns</span>
+<span class="p">$ </span>dumpveil verify safe.sql
+<span class="g">✓ clean: no real emails, phones, IPs, card numbers, IBANs, SSNs, keys or password hashes found</span>
+  3,303 values recognised as dumpveil fakes</pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/dumpveil">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/dumpveil/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/dumpveil/issues">Issues</a></div></article>
 <article class="card" id="turkiye-mcp"><div class="card-top"><span class="tag">MCP server</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/turkiye-mcp">turkiye-mcp</a></h3><p>An MCP server with 17 Türkiye-specific tools for Claude, Cursor, VS Code and other clients: official TCMB exchange rates, live earthquakes, the holiday calendar and business-day math, IBAN/TCKN/VKN validation, provinces, prayer times and weather. No API keys.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="d">// ~/.cursor/mcp.json</span>
 {
   "mcpServers": {
