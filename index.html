@@ -243,8 +243,8 @@ todoage/   certpeek/     envguard/
   </div>
   <div class="wrap hero-meta">
     <div class="stats" aria-label="At a glance">
-      <div><b>45</b><span>public repositories</span></div>
-      <div><b>32</b><span>developer tools</span></div>
+      <div><b>46</b><span>public repositories</span></div>
+      <div><b>33</b><span>developer tools</span></div>
       <div><b>MIT</b><span>licensed, CI on every push</span></div>
     </div>
     <ul class="stack" aria-label="Skills and stack">
@@ -332,6 +332,14 @@ dumpveil run  examples/shop.pg.sql → safe.sql · postgres
 <span class="p">$ </span>dumpveil verify safe.sql
 <span class="g">✓ clean: no real emails, phones, IPs, card numbers, IBANs, SSNs, keys or password hashes found</span>
   3,303 values recognised as dumpveil fakes</pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/dumpveil">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/dumpveil/releases">Binaries</a><a class="btn-s ghost" href="https://github.com/celaldrg/dumpveil/issues">Issues</a></div></article>
+<article class="card" id="testsift"><div class="card-top"><span class="tag">Testing &amp; CI</span><span class="chip"><i style="background:#3572a5"></i>Python</span></div><h3><a href="https://github.com/celaldrg/testsift">testsift</a></h3><p>Runs only the tests a change can affect. Builds an import graph for Python, JS/TS, Go, Rust and Java/Kotlin, adds naming, fixture and git co-change signals, and prints the tests to run with the exact chain that selected each one. <code>testsift backtest</code> measures recall on your own recent commits instead of asking you to trust it. Zero dependencies.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="p">$ </span>testsift select --base main
+testsift · 4 changed files since main · safety normal
+<span class="g">  run 4 of 12 tests (33.3%)  skip 8 · 66.7% saved</span>
+<span class="d">  static    services/billing/tests/test_tax.py      tax.py → test_tax.py</span>
+<span class="d">  static    web/src/profile.test.ts                 profile.ts → profile.test.ts</span>
+<span class="d">  static    services/billing/tests/test_invoice.py  tax.py → invoice.py → test_invoice.py</span>
+<span class="d">  reference services/billing/tests/test_export.py   export.py → test_export.py</span>
+<span class="d">  ignored 1 non-code file(s): docs/README.md</span></pre></div></details><div class="card-links"><a class="btn-s" href="https://github.com/celaldrg/testsift">Source <span aria-hidden="true">↗</span></a><a class="btn-s ghost" href="https://github.com/celaldrg/testsift/releases">Releases</a><a class="btn-s ghost" href="https://github.com/celaldrg/testsift/issues">Issues</a></div></article>
 <article class="card" id="turkiye-mcp"><div class="card-top"><span class="tag">MCP server</span><span class="chip"><i style="background:#3178c6"></i>TypeScript</span></div><h3><a href="https://github.com/celaldrg/turkiye-mcp">turkiye-mcp</a></h3><p>An MCP server with 17 Türkiye-specific tools for Claude, Cursor, VS Code and other clients: official TCMB exchange rates, live earthquakes, the holiday calendar and business-day math, IBAN/TCKN/VKN validation, provinces, prayer times and weather. No API keys.</p><details class="sample"><summary>Example output</summary><div class="term"><pre tabindex="0"><span class="d">// ~/.cursor/mcp.json</span>
 {
   "mcpServers": {
